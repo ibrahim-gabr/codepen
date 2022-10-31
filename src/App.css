@@ -1,0 +1,123 @@
+.codepen{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10px 1fr;
+    height: calc(100vh - 55px);
+}
+.editor{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 100%;
+}
+.code-mirror{
+    height: 100% !important;
+    width: 100% !important;
+    /*border-left: darkgrey 1px solid;*/
+}
+.editor-header{
+    background: #060606;
+    white-space: nowrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 0.5rem !important;
+    justify-content: space-between;
+}
+.editor-header .editor-span{
+    /*border-top: 3px solid transparent;*/
+    white-space: nowrap;
+    font-weight: 700;
+    color: hsl(226.6666666667deg 11.8421052632% 70.1960784314%);
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 9px 12px;
+    background: #1e1e1e;
+}
+
+.separator{
+    background: #0d1116;
+    width: 100%;
+    height: 10px;
+    margin: 0 !important;
+}
+#editor-preview{
+    height:100%;
+}
+
+.table-wrapper {
+    background: black;
+    overflow: hidden; /* Clips any scrollbars that appear */
+}
+
+table {
+    width: 100%;
+    display: grid;
+    grid-template-columns:   minmax(150px, 3fr) minmax(150px, 1fr) minmax(150px, 1fr);
+    overflow: auto; /* Allow scrolling within the table */
+    grid-template-rows: 40px 1fr;
+    height:100%;
+}
+tbody tr{
+    position: relative;
+}
+table th {
+    position: relative;
+    font-size: 18px;
+}
+
+table th,
+table td {
+    text-align: left;
+    /*padding: 16px 20px;*/
+}
+
+.editor-span{
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
+    overflow: hidden;
+    display: block;
+    height: 100%;
+}
+
+table tr td {
+    /*border-top: 1px solid #ccc;*/
+}
+table thead,
+table tbody,
+table tr {
+    display: contents;
+}
+.resize-handle {
+    display: block;
+    position: absolute;
+    cursor: col-resize;
+    width: 7px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-right: 2px solid transparent;
+}
+
+.resize-handle:hover {
+    border-color: #ccc;
+}
+
+.resize-handle.active {
+    border-color: #517ea5;
+}
+
